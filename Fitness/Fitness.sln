@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The first stage", "The first stage\The first stage.csproj", "{177E44DA-EC96-4317-8BC7-E0F6B3A0C1F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitness.CMD", "Fitness.CMD\Fitness.CMD.csproj", "{4919B913-C284-4843-94FD-64B46C7CA96A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{177E44DA-EC96-4317-8BC7-E0F6B3A0C1F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{177E44DA-EC96-4317-8BC7-E0F6B3A0C1F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{177E44DA-EC96-4317-8BC7-E0F6B3A0C1F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4919B913-C284-4843-94FD-64B46C7CA96A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4919B913-C284-4843-94FD-64B46C7CA96A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4919B913-C284-4843-94FD-64B46C7CA96A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4919B913-C284-4843-94FD-64B46C7CA96A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
