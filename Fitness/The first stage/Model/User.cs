@@ -15,18 +15,18 @@ namespace The_first_stage.Model
 
         public double Height { get; set; }
 
-        public User (string name, Gender gender, DateTime birthDate, double weight, double height)
+        public User(string name, Gender gender, DateTime birthDate, double weight, double height)
         {
             #region Condition check
             if (string.IsNullOrWhiteSpace(name))
             {
-                throw new ArgumentNullException("User name can`t be empty", nameof(name));
+                throw new ArgumentNullException("Username can`t be empty", nameof(name));
             }
             if (gender == null)
             {
                 throw new ArgumentNullException("The field name cannot be empty", nameof(gender));
             }
-            if(birthDate < DateTime.Parse("01.01.1900") || birthDate >= DateTime.Now)
+            if (birthDate < DateTime.Parse("01.01.1900") || birthDate >= DateTime.Now)
             {
                 throw new ArgumentException("Impossible date of birth", nameof(birthDate));
             }
@@ -47,9 +47,18 @@ namespace The_first_stage.Model
             Height = height;
 
         }
+
+        public User(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentNullException("Username can`t be empty", nameof(name));
+            }
+            Name = name;
+        }
         public override string ToString()
         {
-            return Name;
+            return Name + " ";
         }
     }
 }

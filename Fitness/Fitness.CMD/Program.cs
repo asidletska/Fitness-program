@@ -12,20 +12,9 @@ namespace Fitness.CMD
             Console.WriteLine("Enter your name: ");
             var name = Console.ReadLine();
 
-            Console.WriteLine("Enter your gender: ");
-            var gender = Console.ReadLine();
+            var userController = new UserController(name);
 
-            Console.WriteLine("Enter your date of birth: ");
-            var birthdate = DateTime.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter your weight: ");
-            var weight = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter your height: ");
-            var height = double.Parse(Console.ReadLine());
-
-            var userController = new UserController(name, gender, birthdate, weight, height);
-            userController.Save();
         }
     }
 }
