@@ -9,20 +9,32 @@ namespace The_first_stage.Controller
     {
         public User User { get; }
 
-        public UserController(string userName, string genderName,) 
+        public UserController(string userName, string genderName, DateTime birthDay, double weight, double height)
         {
             // TODO: check
-            var gander = new Gender(genderName);
-            var user = new User(userName, gender, )
-            User = user  ?? throw new ArgumentNullException("User can`t be equal to Null", nameof(user));
+            var gender = new Gender(genderName);
+            User = new User(userName, gender, birthDay, weight, height);
+
         }
+        public UserController()
+        {
+            var formatter = new BinaryFormatter();
+            using (var fs = new FileStream("users.dat", FileMode.OpenOrCreate))
+            {
+                if (formatter.Deserialize(fs) is User user)
+                {
+                    User = user;
+                }
+            }
+        }
+
         /// <summary>
         /// Save user data.
         /// </summary>
         public void Save()
         {
             var formatter = new BinaryFormatter();
-            using(var fs = new FileStream("users.dat", FileMode.OpenOrCreate))
+            using (var fs = new FileStream("users.dat", FileMode.OpenOrCreate))
             {
                 formatter.Serialize(fs, User);
             }
@@ -32,27 +44,6 @@ namespace The_first_stage.Controller
         /// </summary>
         /// <returns></returns>
         /// <exception cref="FileLoadException"></exception>
-        public UserController()
-        {
-            var formatter = new BinaryFormatter();
-            using (var fs = new FileStream("users.dat", FileMode.OpenOrCreate))
-            {
-                if(formatter.Deserialize(fs) is User user)
-                {
-                    User = user;
-                }
-                // TODO: Что делать если пользователя не прочитали
-
-               /* if(formatter.Deserialize(fs) is User user)
-                {
-                    return user;
-                }
-                else
-                {
-                    return null;
-                    throw new FileLoadException("Failed to retrieve user data from the file", "users.dat");
-                }*/
-            }
-        }
+        
     }
 }
