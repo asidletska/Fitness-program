@@ -10,7 +10,9 @@ namespace The_first_stage.Controller
     public class UserController
     {
         public List<User> Users { get; }
-        public User CurrentUser { get; }   
+        public User CurrentUser { get; }
+
+        public bool IsNewUser { get; } = false;
         public UserController(string userName)
         {
             if (string.IsNullOrWhiteSpace(userName))
@@ -24,6 +26,7 @@ namespace The_first_stage.Controller
             {
                 CurrentUser = new User(userName);
                 Users.Add(CurrentUser);
+                IsNewUser = true;
                 Save();
             }
 
@@ -47,7 +50,15 @@ namespace The_first_stage.Controller
                 }
             }            
         }
-
+        public void SetNewUserData(string genderName, DateTime birthDate, double weight = 1, double height = 1)
+        {
+            // Check
+            CurrentUser.Gender = new Gender(genderName);
+            CurrentUser.BirthDate = birthDate;
+            CurrentUser.Weight = weight;
+            CurrentUser.Height = height;
+            Save();
+        }
         /// <summary>
         /// Save user data.
         /// </summary>

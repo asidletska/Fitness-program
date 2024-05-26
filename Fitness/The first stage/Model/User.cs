@@ -6,15 +6,15 @@ namespace The_first_stage.Model
     public class User
     {
         public string Name { get; }
-        public Gender Gender { get; }
-        public Gender gender { get; }
+        public Gender Gender { get; set; }
 
-        public DateTime BirthDate { get; }
+        public DateTime BirthDate { get; set; }
 
         public double Weight { get; set; }
 
         public double Height { get; set; }
-
+         
+        public int Age { get { return DateTime.Now.Year - BirthDate.Year; } }
         public User(string name, Gender gender, DateTime birthDate, double weight, double height)
         {
             #region Condition check
@@ -58,7 +58,7 @@ namespace The_first_stage.Model
         }
         public override string ToString()
         {
-            return Name + " ";
+            return Name + " " + Age;
         }
     }
 }
