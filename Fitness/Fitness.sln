@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The first stage", "The firs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fitness.CMD", "Fitness.CMD\Fitness.CMD.csproj", "{4919B913-C284-4843-94FD-64B46C7CA96A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The first stageTests", "The first stageTests\The first stageTests.csproj", "{DA403C31-73A3-48CB-AAAC-35BC2F7704FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4919B913-C284-4843-94FD-64B46C7CA96A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4919B913-C284-4843-94FD-64B46C7CA96A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4919B913-C284-4843-94FD-64B46C7CA96A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA403C31-73A3-48CB-AAAC-35BC2F7704FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA403C31-73A3-48CB-AAAC-35BC2F7704FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA403C31-73A3-48CB-AAAC-35BC2F7704FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA403C31-73A3-48CB-AAAC-35BC2F7704FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
