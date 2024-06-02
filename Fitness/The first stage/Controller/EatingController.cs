@@ -1,36 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
+using System.Linq;
 using The_first_stage.Model;
 
 namespace The_first_stage.Controller
 {
-    public class EatingController
+    public class EatingController : ControllerBase
     {
+        private const string FOODS_FILENAME = "foods.dat";
+        private const string EATINGS_FILE_NAME = "eatings.dat";
         private readonly User user;
-        public List<Food> Foods { get; set; }
+        public List<Food> Foods { get; }
+        public Eating Eating { get; }
         public EatingController(User user)
         {
             this.user = user ?? throw new ArgumentNullException("Username can`t be empty", nameof(user));
 
             Foods = GetAllFoods();
+            Eating = GetEating();
         }
-        private List<Food> GetAllFoods()
+
+        public void Add(Food food, double weight)
         {
-            var formatter = new BinaryFormatter();
-            using (var fs = new FileStream("foods.dat", FileMode.OpenOrCreate))
+            var product = Foods.SingleOrDefault(f => f.Name == food.Name);
+            if(product == null)
             {
-                if (fs.Length > 0 && formatter.Deserialize(fs) is List<Food> foods)
-                {
-                    return foods;
-                }
-                else
-                {
-                    return new List<Food>();
-                }
+                Foods.Add(food);
+                Eating.Add(food, weight);
+                Save();
+            }
+            else
+            {
+                Eating.Add(product, weight);
+                Save();
             }
         }
-        
+        private Eating GetEating()
+        {
+            return Load<Eating>(EATINGS_FILE_NAME) ?? new Eating(user);
+        }
+
+        private T Load<T>(string eATINGS_FILE_NAME)
+        {
+            throw new NotImplementedException();
+        }
+
+        private List<Food> GetAllFoods()
+        {
+            return Load<List<Food>>(FOODS_FILENAME) ?? new List<Food>();
+        }
+        private void Save()
+        {
+            Save(FOODS_FILENAME, Foods);
+            Save(EATINGS_FILE_NAME, Eating);
+        }
     }
 }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace The_first_stage.Model
-{   
+{
     /// <summary>
     /// Приём пищи
     /// </summary>
+
+    [Serializable]
     public class Eating
     {
         public DateTime Moment { get;  }

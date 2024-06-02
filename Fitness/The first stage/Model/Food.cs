@@ -2,6 +2,7 @@
 
 namespace The_first_stage.Model
 {
+    [Serializable]
     public class Food
     {
         public string Name { get; }
