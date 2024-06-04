@@ -1,0 +1,10 @@
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\bin\Debug\Fitness.CMD.exe.config
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\bin\Debug\Fitness.CMD.exe
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\bin\Debug\Fitness.CMD.pdb
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\bin\Debug\The first stage.dll
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\bin\Debug\The first stage.pdb
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\obj\Debug\Fitness.CMD.csproj.AssemblyReference.cache
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\obj\Debug\Fitness.CMD.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\obj\Debug\Fitness.CMD.csproj.CopyComplete
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\obj\Debug\Fitness.CMD.exe
+C:\Users\user\Documents\Fitness-program\Fitness\Fitness.CMD\obj\Debug\Fitness.CMD.pdb
